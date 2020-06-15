@@ -1,0 +1,73 @@
+conky.config = {
+alignment = 'top_right',
+background = false,
+double_buffer = true,
+border_width = 0,
+cpu_avg_samples = 2,
+default_color = 'white',
+default_outline_color = 'white',
+default_shade_color = 'white',
+draw_borders = false,
+draw_graph_borders = true,
+draw_outline = false,
+draw_shades = false,
+use_xft = true,
+font = 'DejaVu Sans Mono:size=12',
+gap_x = 5,
+gap_y = 30,
+net_avg_samples = 2,
+no_buffers = true,
+out_to_console = false,
+out_to_stderr = false,
+extra_newline = false,
+own_window = true,
+own_window_class = 'Conky',
+own_window_type = 'override',
+own_window_transparent = false,
+stippled_borders = 0,
+update_interval = 1.0,
+uppercase = false,
+use_spacer = 'none',
+show_graph_scale = false,
+show_graph_range = false,
+minimum_width = 563,
+minimum_height = 742,
+maximum_width = 563,
+
+--Lua scripts
+lua_load = '~/.lua/lcars.lua',
+lua_draw_hook_pre ='main'
+
+}
+
+conky.text = [[
+
+#hoek linksonder naar boven, 1ste
+${image ~/.lua/lcars-corner-ld-blue.png -p -1,169 -s 125x65 }
+# eerste blok links bovenaan
+${image ~/.lua/lcars-blue.png -p -1,1 -s 82x164 }
+
+# eerste dwarsbalk vanaf eerste hoek
+${image ~/.lua/lcars-blue.png -p 124,219 -s 208x15}
+
+# 3de dwarsbalk rechts naast de paarse
+${image ~/.lua/lcars-purple.png -p 557,219 -s 16x15}
+
+# 2de hoek linkerzijde
+${image ~/.lua/lcars-corner-tls-blue.png -p -1,241 -s 125x37 }
+# opvulling van 2de hoek naar onderen toe
+${image ~/.lua/lcars-blue.png -p -1,278 -s 82x23}
+
+# 1ste dwarsbalk van hoeks naar rechts
+${image ~/.lua/lcars-blue.png -p 124,241 -s 208x15}
+
+# 2de dwarsbalk rechts naast de blauwe
+${image ~/.lua/lcars-purple.png -p 557,241 -s 16x15}
+
+# hoek linksonderin
+${image ~/.lua/lcars-corner-lds-blue.png -p -1,675 -s 125x34 }
+${image ~/.lua/lcars-blue.png -p -1,667 -s 82x10}
+# onderste horizontale balk
+${image ~/.lua/lcars-blue.png -p 124,694 -s 450x15}
+]]
+
